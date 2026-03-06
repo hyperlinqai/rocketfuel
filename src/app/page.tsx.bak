@@ -1,0 +1,74 @@
+import Link from 'next/link';
+import { Container } from '@/components/layout/Container';
+import { MarketingLayout } from '@/layouts/MarketingLayout';
+
+export default function Home() {
+  return (
+    <MarketingLayout>
+      <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Next.js SEO Architect
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              A production-ready, SEO-optimized Next.js 14+ starter template. Built for performance, scalability, and developer experience.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link
+                href="/blog"
+                className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >
+                View Blog
+              </Link>
+              <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
+                Learn more <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-24 bg-gray-50">
+        <Container>
+          <div className="mx-auto max-w-2xl lg:max-w-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center mb-12">
+              Features
+            </h2>
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+              {[
+                {
+                  name: 'SEO Optimized',
+                  description: 'Built-in metadata, JSON-LD schema, sitemap, and robots.txt generation.',
+                },
+                {
+                  name: 'Performance First',
+                  description: 'Optimized fonts, images, and scripts. Zero CLS with strict layout system.',
+                },
+                {
+                  name: 'Type Safe',
+                  description: 'Full TypeScript support with strict mode enables.',
+                },
+                {
+                  name: 'Responsive Layouts',
+                  description: 'Mobile-first Container system and specialized layouts for varied needs.',
+                },
+              ].map((feature) => (
+                <div key={feature.name} className="relative pl-16">
+                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black text-white">
+                      {/* Icon placeholder */}
+                      <span className="text-xl">✓</span>
+                    </div>
+                    {feature.name}
+                  </dt>
+                  <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </Container>
+      </section>
+    </MarketingLayout>
+  );
+}
