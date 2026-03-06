@@ -1,19 +1,19 @@
 export const SITE_CONFIG = {
-  name: 'Next.js SEO Architect',
-  description: 'Enterprise-grade Next.js starter with advanced SEO architecture',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com',
-  ogImage: 'https://example.com/og.jpg',
+  name: 'RocketFuel',
+  description: 'Enterprise-grade crypto payment processing and global payouts for modern businesses.',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://rocketfuel.inc',
+  ogImage: 'https://rocketfuel.inc/og.jpg',
   links: {
-    twitter: 'https://twitter.com/example',
-    github: 'https://github.com/example',
+    twitter: 'https://twitter.com/rocketfuel',
+    github: 'https://github.com/rocketfuel',
   },
   authors: [
     {
-      name: 'Shoaib Khan',
-      url: 'https://example.com',
+      name: 'RocketFuel',
+      url: 'https://rocketfuel.inc',
     },
   ],
-  keywords: ['Next.js', 'React', 'SEO', 'Performance', 'Web Development'],
+  keywords: ['Crypto Payments', 'Global Payouts', 'Blockchain', 'Invoicing', 'Payment Processing'],
 } as const;
 
 export type SiteConfig = typeof SITE_CONFIG;

@@ -6,6 +6,12 @@ import { HowItWorks } from '@/components/home/HowItWorks';
 import { IndustrySolutions } from '@/components/home/IndustrySolutions';
 import { Stats } from '@/components/home/Stats';
 import { Compliance } from '@/components/home/Compliance';
+import { constructMetadata } from '@/seo/metadata';
+
+export const metadata = constructMetadata({
+  title: 'RocketFuel | Global Crypto Payments & Commerce Solutions',
+  description: 'Future-proof your business with reliable crypto payment processing, high-speed global payouts, B2B invoicing, and Web3 loyalty networks.',
+});
 
 export default function Home() {
   return (

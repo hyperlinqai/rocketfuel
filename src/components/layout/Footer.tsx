@@ -172,10 +172,11 @@ export function Footer() {
                         </p>
 
                         {/* Legal Links */}
-                        <div className="flex items-center gap-6 text-sm">
-                            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-                            <Link href="/cookies" className="hover:text-white transition-colors">Cookie Policy</Link>
+                        <div className="flex flex-wrap items-center justify-center gap-4 text-sm mt-4 md:mt-0">
+                            <a href="/Policies/Privacy-Policy-RocketFuel-2023.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors whitespace-nowrap">Privacy Policy</a>
+                            <a href="/Policies/Terms-and-Conditions-RocketFuel-1.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors whitespace-nowrap">Terms & Conditions</a>
+                            <a href="/Policies/AML-KYB-KYC-Policy-RocketFuel-AS-v1.5.2023.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors whitespace-nowrap">AML/KYC Policy</a>
+                            <a href="/Policies/Data-Provision.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors whitespace-nowrap">Data Provision</a>
                         </div>
 
                         {/* Social Links */}
