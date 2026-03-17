@@ -69,7 +69,7 @@ const menuData = {
     resources: {
         title: 'Resources',
         items: [
-            { name: 'Blog', href: '/blog', icon: PenTool },
+            { name: 'Blog', href: '#', icon: PenTool },
             { name: 'Case Studies', href: '/resources/case-studies', icon: BookMarked },
             { name: 'Guides', href: '/resources/guides', icon: FileQuestion },
             { name: 'Help Center', href: '/resources/help-center', icon: HelpCircle },

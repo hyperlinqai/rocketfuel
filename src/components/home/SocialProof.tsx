@@ -17,17 +17,36 @@ export function SocialProof() {
                     Trusted by platforms processing millions monthly
                 </p>
 
-                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                    {partners.map((partner, index) => (
-                        <div key={index} className="h-16 md:h-20 w-32 md:w-40 relative hover:scale-110 transition-transform">
-                            <Image
-                                src={partner.logo}
-                                alt={partner.name}
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    ))}
+                <div className="flex overflow-hidden relative">
+                    {/* Gradient Masks */}
+                    <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-secondary-bg to-transparent z-10 pointer-events-none" />
+                    <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-secondary-bg to-transparent z-10 pointer-events-none" />
+
+                    {/* Marquee Container */}
+                    <div className="flex animate-marquee gap-8 md:gap-16 pr-8 md:pr-16 w-max opacity-70 hover:opacity-100 transition-opacity duration-300">
+                        {/* Original Array */}
+                        {partners.map((partner, index) => (
+                            <div key={`logo-1-${index}`} className="h-12 md:h-16 w-32 md:w-40 relative flex-shrink-0 grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300">
+                                <Image
+                                    src={partner.logo}
+                                    alt={partner.name}
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                        ))}
+                        {/* Duplicated Array for infinite scroll effect */}
+                        {partners.map((partner, index) => (
+                            <div key={`logo-2-${index}`} className="h-12 md:h-16 w-32 md:w-40 relative flex-shrink-0 grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300">
+                                <Image
+                                    src={partner.logo}
+                                    alt={partner.name}
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <p className="mt-8 text-sm text-secondary-text max-w-2xl mx-auto italic">

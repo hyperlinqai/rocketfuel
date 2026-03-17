@@ -6,7 +6,7 @@ const products = [
         title: "Crypto Merchant Processing",
         description: "One checkout for crypto & bank. Lift approvals, lower cost, settle your way.",
         image: "/images/products/crypto-merchant.png",
-        link: "/products/merchant-processing"
+        link: "/products/crypto-merchant-processing"
     },
     {
         title: "Global Payouts",
@@ -36,7 +36,7 @@ const products = [
         title: "R-Points",
         description: "Blockchain Loyalty & Rewards Network",
         image: "/images/products/rewards.png",
-        link: "/products/rewards"
+        link: "/products/blockchain-loyalty-network"
     }
 ];
 
